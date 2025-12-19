@@ -1,0 +1,1273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SNEC SAMASTHA - National Education Council</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Login Page -->
+  <div id="login-page">
+    <div class="login-container">
+      <div class="logo-container">
+        <img src="images/image1.png" alt="SNEC SAMASTHA Logo" class="logo">
+      </div>
+      <h2 class="welcome-text">Welcome Back!</h2>
+      <form id="login-form">
+        <div class="form-group">
+          <label>Email</label>
+          <div class="input-wrapper">
+            <span class="input-icon-left">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M3.33334 5.83333L10 10.8333L16.6667 5.83333M3.33334 15H16.6667C17.5871 15 18.3333 14.2538 18.3333 13.3333V6.66667C18.3333 5.74619 17.5871 5 16.6667 5H3.33334C2.41286 5 1.66667 5.74619 1.66667 6.66667V13.3333C1.66667 14.2538 2.41286 15 3.33334 15Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <input type="email" id="email" placeholder="Enter Email Address" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Password</label>
+          <div class="input-wrapper">
+            <span class="input-icon-left">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M15.8333 9.16667H4.16667C3.24619 9.16667 2.5 9.91286 2.5 10.8333V16.6667C2.5 17.5871 3.24619 18.3333 4.16667 18.3333H15.8333C16.7538 18.3333 17.5 17.5871 17.5 16.6667V10.8333C17.5 9.91286 16.7538 9.16667 15.8333 9.16667Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M5.83334 9.16667V5.83333C5.83334 4.72826 6.27233 3.66846 7.05373 2.88706C7.83513 2.10565 8.89494 1.66667 10 1.66667C11.1051 1.66667 12.1649 2.10565 12.9463 2.88706C13.7277 3.66846 14.1667 4.72826 14.1667 5.83333V9.16667" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <input type="password" id="password" placeholder="Enter Password" required>
+            <button type="button" class="input-icon-right toggle-password" id="togglePassword">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" class="eye-open">
+                <path d="M1.66667 10C1.66667 10 4.16667 4.16667 10 4.16667C15.8333 4.16667 18.3333 10 18.3333 10C18.3333 10 15.8333 15.8333 10 15.8333C4.16667 15.8333 1.66667 10 1.66667 10Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M10 12.5C11.3807 12.5 12.5 11.3807 12.5 10C12.5 8.61929 11.3807 7.5 10 7.5C8.61929 7.5 7.5 8.61929 7.5 10C7.5 11.3807 8.61929 12.5 10 12.5Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="forgot-password">
+          <a href="#">Forgot Password?</a>
+        </div>
+        <button type="submit" class="sign-in-btn">Sign In</button>
+        <div class="create-account">
+          New Here? <a href="#">Create An Account</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Dashboard Page -->
+  <div id="dashboard-page" style="display: none;">
+    <header class="header">
+      <div class="header-left">
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle Menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M3 12H21M3 6H21M3 18H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      <div class="header-logo">
+          <img src="images/image2.png" alt="SNEC Logo" class="header-logo-img">
+        </div>
+      </div>
+      <div class="user-profile">
+        <span class="user-name">Abdul Vahid Faizy</span>
+        <div class="user-avatar">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=faces" alt="User Avatar">
+        </div>
+      </div>
+    </header>
+    
+    <!-- Mobile Sidebar Overlay -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <div class="main-content">
+      <aside class="sidebar">
+        <div class="sidebar-header-mobile">
+          <div class="sidebar-logo-mobile">
+            <img src="images/image1.png" alt="SNEC SAMASTHA Logo" class="sidebar-logo-img">
+          </div>
+          <button class="sidebar-close-btn" id="sidebarCloseBtn" aria-label="Close Menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+        <ul class="sidebar-menu">
+          <li>
+            <a href="#" class="active" data-section="home">
+              <span>Home</span>
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M3 7.5L10 2.5L17 7.5V16.25C17 16.5815 16.8683 16.8995 16.6339 17.1339C16.3995 17.3683 16.0815 17.5 15.75 17.5H4.25C3.91848 17.5 3.60054 17.3683 3.36612 17.1339C3.1317 16.8995 3 16.5815 3 16.25V7.5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </li>
+          <!-- <li>
+            <a href="#">
+              <span>Profile</span>
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M16.6667 17.5V15.8333C16.6667 14.9493 16.3155 14.1014 15.6904 13.4763C15.0652 12.8512 14.2174 12.5 13.3333 12.5H6.66667C5.78261 12.5 4.93477 12.8512 4.30964 13.4763C3.68452 14.1014 3.33334 14.9493 3.33334 15.8333V17.5M13.3333 5.83333C13.3333 7.67428 11.841 9.16667 10 9.16667C8.15906 9.16667 6.66667 7.67428 6.66667 5.83333C6.66667 3.99238 8.15906 2.5 10 2.5C11.841 2.5 13.3333 3.99238 13.3333 5.83333Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </li> -->
+          <li>
+            <a href="#" data-section="institution">
+              <span>Institution</span>
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M3.33334 5H16.6667C17.5871 5 18.3333 5.74619 18.3333 6.66667V15C18.3333 15.9205 17.5871 16.6667 16.6667 16.6667H3.33334C2.41286 16.6667 1.66667 15.9205 1.66667 15V6.66667C1.66667 5.74619 2.41286 5 3.33334 5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M13.3333 5V3.33333C13.3333 2.89131 13.1577 2.46738 12.8452 2.15482C12.5326 1.84226 12.1087 1.66667 11.6667 1.66667H8.33334C7.89131 1.66667 7.46739 1.84226 7.15483 2.15482C6.84227 2.46738 6.66667 2.89131 6.66667 3.33333V5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="#" data-section="applications">
+              <span>Applications</span>
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M11.6667 1.66667H5.00001C4.55798 1.66667 4.13406 1.84226 3.8215 2.15482C3.50894 2.46738 3.33334 2.89131 3.33334 3.33333V16.6667C3.33334 17.1087 3.50894 17.5326 3.8215 17.8452C4.13406 18.1577 4.55798 18.3333 5.00001 18.3333H15C15.442 18.3333 15.866 18.1577 16.1785 17.8452C16.4911 17.5326 16.6667 17.1087 16.6667 16.6667V6.66667L11.6667 1.66667Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M11.6667 1.66667V6.66667H16.6667" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="#" data-section="notification">
+              <span>Notification</span>
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M15 6.66667C16.3807 6.66667 17.5 5.54738 17.5 4.16667C17.5 2.78595 16.3807 1.66667 15 1.66667C13.6193 1.66667 12.5 2.78595 12.5 4.16667C12.5 5.54738 13.6193 6.66667 15 6.66667Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M10 18.3333V10M10 10V1.66667M10 10L2.5 5.83333M10 10L17.5 5.83333" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="#" data-section="hallticket">
+              <span>Hall Ticket</span>
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M16.6667 2.5H3.33334C2.41286 2.5 1.66667 3.24619 1.66667 4.16667V15.8333C1.66667 16.7538 2.41286 17.5 3.33334 17.5H16.6667C17.5871 17.5 18.3333 16.7538 18.3333 15.8333V4.16667C18.3333 3.24619 17.5871 2.5 16.6667 2.5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M1.66667 8.33333H18.3333" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="#" data-section="examresult">
+              <span>Exam Result</span>
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M8.33334 10H11.6667M8.33334 13.3333H11.6667M13.3333 3.33333V5.83333M6.66667 3.33333V5.83333M5.83334 17.5H14.1667C15.0871 17.5 15.8333 16.7538 15.8333 15.8333V6.66667C15.8333 5.74619 15.0871 5 14.1667 5H5.83334C4.91286 5 4.16667 5.74619 4.16667 6.66667V15.8333C4.16667 16.7538 4.91286 17.5 5.83334 17.5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="#" data-section="studymaterials">
+              <span>Study Materials</span>
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M4.16667 5.83333H15.8333M4.16667 10H15.8333M4.16667 14.1667H15.8333" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="#" data-section="activities">
+              <span>Activities</span>
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M16.6667 12.5C16.6667 13.163 16.4033 13.7989 15.9344 14.2678C15.4656 14.7366 14.8297 15 14.1667 15H6.66667L2.5 18.3333V4.16667C2.5 3.50363 2.7634 2.86774 3.23223 2.39891C3.70107 1.93007 4.33696 1.66667 5 1.66667H14.1667C14.8297 1.66667 15.4656 1.93007 15.9344 2.39891C16.4033 2.86774 16.6667 3.50363 16.6667 4.16667V12.5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </aside>
+
+      <section class="content-area" id="home-section">
+        <!-- LEFT COLUMN: Profile Section -->
+        <div class="profile-column">
+          <!-- Profile Info Card -->
+          <div class="card profile-card-compact">
+            <div class="profile-header">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M20 21V19C20 17.9391 19.5786 16.9217 18.8284 16.1716C18.0783 15.4214 17.0609 15 16 15H8C6.93913 15 5.92172 15.4214 5.17157 16.1716C4.42143 16.9217 4 17.9391 4 19V21M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <h3>Profile</h3>
+          </div>
+            <div class="profile-content">
+              <div class="profile-avatar-small">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=faces" alt="Profile">
+              </div>
+              <div class="profile-details">
+          <div class="profile-name">Abu Bakr Nasir Hanania</div>
+                <div class="profile-info">+91 9874563210</div>
+                <div class="profile-info">abubakrnasirhanania@Gmail.Com</div>
+                <div class="profile-info">01/01/2005</div>
+          </div>
+            </div>
+        </div>
+
+          <!-- Attendance Card -->
+          <div class="card attendance-card">
+            <div class="attendance-header-row">
+              <div class="attendance-today">
+                <span class="attendance-label">Today :</span>
+                <span class="attendance-value-blue">28/07/2025</span>
+              </div>
+              <button class="btn btn-primary attendance-view-btn">View</button>
+            </div>
+            <div class="attendance-divider"></div>
+            <div class="attendance-content">
+              <div class="attendance-row">
+                <span class="attendance-label">Check In Time :</span>
+                <span class="attendance-value-green">10-10-2025 | 09:30 AM</span>
+              </div>
+              <div class="attendance-row">
+                <span class="attendance-label">Check Out Time :</span>
+                <span class="attendance-value-red">10-10-2025 | 04:30 AM</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- First Semester Exam Card -->
+          <div class="card exam-card">
+            <div class="exam-header">
+              <h3 class="card-title">First Semester Exam - 2025</h3>
+              <button class="btn btn-primary">Register</button>
+            </div>
+            <div class="exam-details">
+              <div class="exam-detail-row">
+                <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+                  <path d="M8.33334 10H11.6667M8.33334 13.3333H11.6667M13.3333 3.33333V5.83333M6.66667 3.33333V5.83333M5.83334 17.5H14.1667C15.0871 17.5 15.8333 16.7538 15.8333 15.8333V6.66667C15.8333 5.74619 15.0871 5 14.1667 5H5.83334C4.91286 5 4.16667 5.74619 4.16667 6.66667V15.8333C4.16667 16.7538 4.91286 17.5 5.83334 17.5Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>15 March 2025 - 17 March 2025</span>
+              </div>
+              <div class="exam-detail-row">
+                <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+                  <path d="M8.33334 10H11.6667M8.33334 13.3333H11.6667M13.3333 3.33333V5.83333M6.66667 3.33333V5.83333M5.83334 17.5H14.1667C15.0871 17.5 15.8333 16.7538 15.8333 15.8333V6.66667C15.8333 5.74619 15.0871 5 14.1667 5H5.83334C4.91286 5 4.16667 5.74619 4.16667 6.66667V15.8333C4.16667 16.7538 4.91286 17.5 5.83334 17.5Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span><span class="text-gray">Last Date Of Reg :</span> 14 March 2025</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Important Message Card -->
+          <div class="card important-card">
+            <div class="important-header">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M21 15C21 15.5304 20.7893 16.0391 20.4142 16.4142C20.0391 16.7893 19.5304 17 19 17H7L3 21V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H19C19.5304 3 20.0391 3.21071 20.4142 3.58579C20.7893 3.96086 21 4.46957 21 5V15Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <h3>Important Message</h3>
+            </div>
+            <div class="important-message">
+              <p>Welcome aboard! Since this is your first time here, kindly take note of your unique credentials for your account.</p>
+              <p><strong>Application No: SN00123</strong></p>
+              <p><strong>Password: your Date of Birth</strong></p>
+              <p>Ensure the security of your login information and refrain from sharing your OTP and password with anyone.</p>
+              <p>Keep them safe for a secure experience throughout the process.</p>
+              <p>You can change the default password using Change Password Option or</p>
+            </div>
+          </div>
+
+          <!-- Collage Level Talent Meet Card -->
+          <div class="card event-card">
+            <div class="event-header-simple">
+              <h3 class="card-title">Collage Level Talent Meet - 2025</h3>
+              <span class="status-badge status-ongoing">On Going</span>
+              <button class="btn btn-primary">Register</button>
+            </div>
+            <div class="event-details-simple">
+              <div class="event-info-row">
+                <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+                  <path d="M8.33334 10H11.6667M8.33334 13.3333H11.6667M13.3333 3.33333V5.83333M6.66667 3.33333V5.83333M5.83334 17.5H14.1667C15.0871 17.5 15.8333 16.7538 15.8333 15.8333V6.66667C15.8333 5.74619 15.0871 5 14.1667 5H5.83334C4.91286 5 4.16667 5.74619 4.16667 6.66667V15.8333C4.16667 16.7538 4.91286 17.5 5.83334 17.5Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>15 March 2025 - 17 March 2025</span>
+              </div>
+              <div class="event-info-row">
+                <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+                  <path d="M8.33334 10H11.6667M8.33334 13.3333H11.6667M13.3333 3.33333V5.83333M6.66667 3.33333V5.83333M5.83334 17.5H14.1667C15.0871 17.5 15.8333 16.7538 15.8333 15.8333V6.66667C15.8333 5.74619 15.0871 5 14.1667 5H5.83334C4.91286 5 4.16667 5.74619 4.16667 6.66667V15.8333C4.16667 16.7538 4.91286 17.5 5.83334 17.5Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span><span class="text-gray">Last Date Of Reg :</span> 14 March 2025</span>
+              </div>
+              <div class="event-info-row">
+                <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+                  <path d="M10 12.5C11.3807 12.5 12.5 11.3807 12.5 10C12.5 8.61929 11.3807 7.5 10 7.5C8.61929 7.5 7.5 8.61929 7.5 10C7.5 11.3807 8.61929 12.5 10 12.5Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M16.6667 10C16.6667 10 13.3333 15.8333 10 15.8333C6.66667 15.8333 3.33333 10 3.33333 10C3.33333 10 6.66667 4.16667 10 4.16667C13.3333 4.16667 16.6667 10 16.6667 10Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>20 Students Registered</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Upload 8th Marks Card -->
+          <div class="card upload-card-compact">
+            <div class="upload-header-row">
+              <h3 class="card-title">Upload 8th Marks</h3>
+              <div class="upload-date">
+                <span class="text-gray">Last Date :</span> <span class="text-blue">28/07/2025</span>
+              </div>
+            </div>
+            <div class="upload-divider"></div>
+            <button class="btn btn-primary btn-full">Click To Upload</button>
+          </div>
+        </div>
+
+        <!-- RIGHT COLUMN: Content Section -->
+        <div class="content-column">
+          <!-- Ongoing Application Process Header -->
+          <div class="application-section-header">
+            <h3 class="card-title">Ongoing Application Process</h3>
+          </div>
+
+          <!-- Life Boys Course Card 1 -->
+          <div class="card application-card">
+            <div class="application-card-header">
+              <h3 class="card-title">Life Boys Course - 2025 Batch</h3>
+              <span class="status-badge status-draft">Draft</span>
+            </div>
+            <div class="application-details-grid">
+              <div class="detail-item">
+                <span class="detail-label">Language</span>
+                <span class="detail-value">: English</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-label">Application Fee</span>
+                <span class="detail-value">: ₹500</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-label">Last date for submitting Application</span>
+                <span class="detail-value">: 15-01-2025</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-label">Last date for Payment</span>
+                <span class="detail-value">: 16-01-2025</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-label">Date for downloading Hall ticket</span>
+                <span class="detail-value">: Will be notified</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-label">Date of Entrance Examination</span>
+                <span class="detail-value">: 19-01-2025</span>
+              </div>
+            </div>
+            <button class="btn btn-primary btn-full">Complete Your Application</button>
+        </div>
+
+          <!-- Life Boys Course Card 2 -->
+          <div class="card application-card">
+            <div class="application-card-header">
+              <h3 class="card-title">Life Boys Course - 2025 Batch</h3>
+            </div>
+            <div class="application-details-grid">
+              <div class="detail-item">
+                <span class="detail-label">Language</span>
+                <span class="detail-value">: English</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-label">Application Fee</span>
+                <span class="detail-value">: ₹500</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-label">Last date for submitting Application</span>
+                <span class="detail-value">: 15-01-2025</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-label">Last date for Payment</span>
+                <span class="detail-value">: 16-01-2025</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-label">Date for downloading Hall ticket</span>
+                <span class="detail-value">: Will be notified</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-label">Date of Entrance Examination</span>
+                <span class="detail-value">: 19-01-2025</span>
+              </div>
+            </div>
+            <button class="btn btn-primary btn-full">Click To Proceed</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Institution Section (Hidden by default) -->
+      <section class="institution-section" style="display: none;">
+        <div class="institution-grid">
+          <!-- Institution Card 1 -->
+          <div class="institution-card">
+            <div class="institution-image">
+              <img src="https://images.unsplash.com/photo-1562774053-701939374585?w=600&h=400&fit=crop" alt="College Building">
+            </div>
+            <div class="institution-content">
+              <div class="institution-affiliation">AFFILIATION NUMBER: 9</div>
+              <h3 class="institution-name">GRACE VALLEY ISLAMIC COLLEGE FOR BOYS</h3>
+              <div class="institution-address">Maravattom, Chengottur P.O, Malappuram - 676503</div>
+              <div class="institution-phone">PH: 8589054502, 8943282582</div>
+              <button class="btn btn-primary institution-btn">View Details</button>
+    </div>
+  </div>
+
+          <!-- Institution Card 2 -->
+          <div class="institution-card">
+            <div class="institution-image">
+              <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=600&h=400&fit=crop" alt="College Building">
+            </div>
+            <div class="institution-content">
+              <div class="institution-affiliation">AFFILIATION NUMBER: 15</div>
+              <h3 class="institution-name">GRACE VALLEY ISLAMIC COLLEGE FOR BOYS</h3>
+              <div class="institution-address">Maravattom, Chengottur P.O, Malappuram - 676503</div>
+              <div class="institution-phone">PH: 8589054502, 8943282582</div>
+              <button class="btn btn-primary institution-btn">View Details</button>
+            </div>
+          </div>
+
+          <!-- Institution Card 3 -->
+          <div class="institution-card">
+            <div class="institution-image">
+              <img src="https://images.unsplash.com/photo-1497486751825-1233686d5d80?w=600&h=400&fit=crop" alt="College Building">
+            </div>
+            <div class="institution-content">
+              <div class="institution-affiliation">AFFILIATION NUMBER: 22</div>
+              <h3 class="institution-name">GRACE VALLEY ISLAMIC COLLEGE FOR BOYS</h3>
+              <div class="institution-address">Maravattom, Chengottur P.O, Malappuram - 676503</div>
+              <div class="institution-phone">PH: 8589054502, 8943282582</div>
+              <button class="btn btn-primary institution-btn">View Details</button>
+            </div>
+          </div>
+
+          <!-- Institution Card 4 -->
+          <div class="institution-card">
+            <div class="institution-image">
+                <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=600&h=400&fit=crop" alt="College Building">
+            </div>
+            <div class="institution-content">
+              <div class="institution-affiliation">AFFILIATION NUMBER: 28</div>
+              <h3 class="institution-name">GRACE VALLEY ISLAMIC COLLEGE FOR BOYS</h3>
+              <div class="institution-address">Maravattom, Chengottur P.O, Malappuram - 676503</div>
+              <div class="institution-phone">PH: 8589054502, 8943282582</div>
+              <button class="btn btn-primary institution-btn">View Details</button>
+            </div>
+          </div>
+
+          <!-- Institution Card 5 -->
+          <div class="institution-card">
+            <div class="institution-image">
+              <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=600&h=400&fit=crop" alt="College Building">
+            </div>
+            <div class="institution-content">
+              <div class="institution-affiliation">AFFILIATION NUMBER: 31</div>
+              <h3 class="institution-name">GRACE VALLEY ISLAMIC COLLEGE FOR BOYS</h3>
+              <div class="institution-address">Maravattom, Chengottur P.O, Malappuram - 676503</div>
+              <div class="institution-phone">PH: 8589054502, 8943282582</div>
+              <button class="btn btn-primary institution-btn">View Details</button>
+            </div>
+          </div>
+
+          <!-- Institution Card 6 -->
+          <div class="institution-card">
+            <div class="institution-image">
+              <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=600&h=400&fit=crop" alt="College Building">
+            </div>
+            <div class="institution-content">
+              <div class="institution-affiliation">AFFILIATION NUMBER: 35</div>
+              <h3 class="institution-name">GRACE VALLEY ISLAMIC COLLEGE FOR BOYS</h3>
+              <div class="institution-address">Maravattom, Chengottur P.O, Malappuram - 676503</div>
+              <div class="institution-phone">PH: 8589054502, 8943282582</div>
+              <button class="btn btn-primary institution-btn">View Details</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Applications Section (Hidden by default) -->
+      <section class="applications-section" style="display: none;">
+        <!-- Ongoing Application Process -->
+        <div class="application-section-wrapper">
+          <div class="application-section-header-with-action">
+            <h3 class="card-title">Ongoing Application Process</h3>
+            <button class="view-all-btn">
+              View All
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+          <div class="application-cards-grid">
+            <!-- Card 1 -->
+            <div class="card application-card">
+              <div class="application-card-header">
+                <h3 class="card-title">Life Boys Course - 2025 Batch</h3>
+              </div>
+              <div class="application-details-grid">
+                <div class="detail-item">
+                  <span class="detail-label">Language</span>
+                  <span class="detail-value">: English</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">Application Fee</span>
+                  <span class="detail-value">: ₹500</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">Last date for submitting Application</span>
+                  <span class="detail-value">: 15-01-2025</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">Last date for Payment</span>
+                  <span class="detail-value">: 16-01-2025</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">Date for downloading Hall ticket</span>
+                  <span class="detail-value">: Will be notified</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">Date of Entrance Examination</span>
+                  <span class="detail-value">: 19-01-2025</span>
+                </div>
+              </div>
+              <button class="btn btn-primary btn-full">Click To Proceed</button>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card application-card">
+              <div class="application-card-header">
+                <h3 class="card-title">Life Boys Course - 2025 Batch</h3>
+              </div>
+              <div class="application-details-grid">
+                <div class="detail-item">
+                  <span class="detail-label">Language</span>
+                  <span class="detail-value">: English</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">Application Fee</span>
+                  <span class="detail-value">: ₹500</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">Last date for submitting Application</span>
+                  <span class="detail-value">: 15-01-2025</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">Last date for Payment</span>
+                  <span class="detail-value">: 16-01-2025</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">Date for downloading Hall ticket</span>
+                  <span class="detail-value">: Will be notified</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">Date of Entrance Examination</span>
+                  <span class="detail-value">: 19-01-2025</span>
+                </div>
+              </div>
+              <button class="btn btn-primary btn-full">Click To Proceed</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Application Submitted -->
+        <div class="application-section-wrapper">
+          <div class="application-section-header">
+            <h3 class="card-title">Application Submitted</h3>
+          </div>
+          <div class="application-cards-grid">
+            <!-- Draft Card -->
+            <div class="card application-card">
+              <div class="application-card-header">
+                <h3 class="card-title">Life Boys Course - 2025 Batch</h3>
+                <span class="status-badge status-draft">Draft</span>
+              </div>
+              <div class="application-details-grid">
+                <div class="detail-item">
+                  <span class="detail-label">Language</span>
+                  <span class="detail-value">: English</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">Application Fee</span>
+                  <span class="detail-value">: ₹500</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">Last date for submitting Application</span>
+                  <span class="detail-value">: 15-01-2025</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">Last date for Payment</span>
+                  <span class="detail-value">: 16-01-2025</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">Date for downloading Hall ticket</span>
+                  <span class="detail-value">: Will be notified</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">Date of Entrance Examination</span>
+                  <span class="detail-value">: 19-01-2025</span>
+                </div>
+              </div>
+              <button class="btn btn-primary btn-full">Complete Your Application</button>
+            </div>
+
+            <!-- Completed Card -->
+            <div class="card application-card">
+              <div class="application-card-header">
+                <h3 class="card-title">Life Boys Course - 2025 Batch</h3>
+                <span class="status-badge status-completed">Completed</span>
+              </div>
+              <div class="application-details-grid">
+                <div class="detail-item">
+                  <span class="detail-label">Language</span>
+                  <span class="detail-value">: English</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">Application Fee</span>
+                  <span class="detail-value">: ₹500</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">Date for downloading Hall ticket</span>
+                  <span class="detail-value">: Will be notified</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">Date of Entrance Examination</span>
+                  <span class="detail-value">: 16-01-2025</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">Application Submitted</span>
+                  <span class="detail-value">: 10-01-2025</span>
+                </div>
+              </div>
+              <button class="btn btn-primary btn-full">Edit Details</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Notification Section (Hidden by default) -->
+      <section class="notification-section" style="display: none;">
+        <div class="notifications-list">
+          <!-- Notification Item 1 -->
+          <div class="notification-item">
+            <div class="notification-icon-wrapper">
+              <div class="notification-icon-container">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="notification-icon">
+                  <path d="M18 8C18 6.4087 17.3679 4.88258 16.2426 3.75736C15.1174 2.63214 13.5913 2 12 2C10.4087 2 8.88258 2.63214 7.75736 3.75736C6.63214 4.88258 6 6.4087 6 8C6 15 3 17 3 17H21C21 17 18 15 18 8Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M13.73 21C13.5542 21.3031 13.3019 21.5547 12.9982 21.7295C12.6946 21.9044 12.3504 21.9965 12 21.9965C11.6496 21.9965 11.3054 21.9044 11.0018 21.7295C10.6982 21.5547 10.4458 21.3031 10.27 21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div class="notification-line"></div>
+            </div>
+            <div class="notification-card">
+              <div class="notification-content">
+                <div class="notification-header">
+                  <h3 class="notification-title">Entrance Exam Registration Open</h3>
+                  <span class="notification-badge-new">New</span>
+                </div>
+                <p class="notification-description">Applications For The Entrance Exam Are Now Open! Register By [01/01/2025] To Take The First Step Toward SNEC.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Notification Item 2 -->
+          <div class="notification-item">
+            <div class="notification-icon-wrapper">
+              <div class="notification-icon-container">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="notification-icon">
+                  <path d="M18 8C18 6.4087 17.3679 4.88258 16.2426 3.75736C15.1174 2.63214 13.5913 2 12 2C10.4087 2 8.88258 2.63214 7.75736 3.75736C6.63214 4.88258 6 6.4087 6 8C6 15 3 17 3 17H21C21 17 18 15 18 8Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M13.73 21C13.5542 21.3031 13.3019 21.5547 12.9982 21.7295C12.6946 21.9044 12.3504 21.9965 12 21.9965C11.6496 21.9965 11.3054 21.9044 11.0018 21.7295C10.6982 21.5547 10.4458 21.3031 10.27 21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div class="notification-line"></div>
+            </div>
+            <div class="notification-card">
+              <div class="notification-content">
+                <div class="notification-header">
+                  <h3 class="notification-title">Hall Ticket Available</h3>
+                </div>
+                <p class="notification-description">Your Hall Ticket For Biology Entrance Exam Is Ready To Download. Bring It To The Exam Venue For Entry.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Notification Item 3 -->
+          <div class="notification-item">
+            <div class="notification-icon-wrapper">
+              <div class="notification-icon-container">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="notification-icon">
+                  <path d="M18 8C18 6.4087 17.3679 4.88258 16.2426 3.75736C15.1174 2.63214 13.5913 2 12 2C10.4087 2 8.88258 2.63214 7.75736 3.75736C6.63214 4.88258 6 6.4087 6 8C6 15 3 17 3 17H21C21 17 18 15 18 8Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M13.73 21C13.5542 21.3031 13.3019 21.5547 12.9982 21.7295C12.6946 21.9044 12.3504 21.9965 12 21.9965C11.6496 21.9965 11.3054 21.9044 11.0018 21.7295C10.6982 21.5547 10.4458 21.3031 10.27 21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div class="notification-line"></div>
+            </div>
+            <div class="notification-card">
+              <div class="notification-content">
+                <div class="notification-header">
+                  <h3 class="notification-title">Exam Venue Details Updated</h3>
+                </div>
+                <p class="notification-description">Your Exam Center Has Been Finalized. Log In To The Portal To Check The Updated Venue Details And Directions</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Notification Item 4 -->
+          <div class="notification-item">
+            <div class="notification-icon-wrapper">
+              <div class="notification-icon-container">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="notification-icon">
+                  <path d="M18 8C18 6.4087 17.3679 4.88258 16.2426 3.75736C15.1174 2.63214 13.5913 2 12 2C10.4087 2 8.88258 2.63214 7.75736 3.75736C6.63214 4.88258 6 6.4087 6 8C6 15 3 17 3 17H21C21 17 18 15 18 8Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M13.73 21C13.5542 21.3031 13.3019 21.5547 12.9982 21.7295C12.6946 21.9044 12.3504 21.9965 12 21.9965C11.6496 21.9965 11.3054 21.9044 11.0018 21.7295C10.6982 21.5547 10.4458 21.3031 10.27 21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div class="notification-line"></div>
+            </div>
+            <div class="notification-card">
+              <div class="notification-content">
+                <div class="notification-header">
+                  <h3 class="notification-title">Fee Payment Reminder</h3>
+                </div>
+                <p class="notification-description">The Deadline For Fee Payment Is [01/01/2025]. Log In To The Portal To Complete Your Transaction.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Notification Item 5 -->
+          <div class="notification-item">
+            <div class="notification-icon-wrapper">
+              <div class="notification-icon-container">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="notification-icon">
+                  <path d="M18 8C18 6.4087 17.3679 4.88258 16.2426 3.75736C15.1174 2.63214 13.5913 2 12 2C10.4087 2 8.88258 2.63214 7.75736 3.75736C6.63214 4.88258 6 6.4087 6 8C6 15 3 17 3 17H21C21 17 18 15 18 8Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M13.73 21C13.5542 21.3031 13.3019 21.5547 12.9982 21.7295C12.6946 21.9044 12.3504 21.9965 12 21.9965C11.6496 21.9965 11.3054 21.9044 11.0018 21.7295C10.6982 21.5547 10.4458 21.3031 10.27 21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div class="notification-line"></div>
+            </div>
+            <div class="notification-card">
+              <div class="notification-content">
+                <div class="notification-header">
+                  <h3 class="notification-title">Fee Payment Reminder</h3>
+                </div>
+                <p class="notification-description">The Deadline For Fee Payment Is [01/01/2025]. Log In To The Portal To Complete Your Transaction.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Notification Item 6 -->
+          <div class="notification-item">
+            <div class="notification-icon-wrapper">
+              <div class="notification-icon-container">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="notification-icon">
+                  <path d="M18 8C18 6.4087 17.3679 4.88258 16.2426 3.75736C15.1174 2.63214 13.5913 2 12 2C10.4087 2 8.88258 2.63214 7.75736 3.75736C6.63214 4.88258 6 6.4087 6 8C6 15 3 17 3 17H21C21 17 18 15 18 8Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M13.73 21C13.5542 21.3031 13.3019 21.5547 12.9982 21.7295C12.6946 21.9044 12.3504 21.9965 12 21.9965C11.6496 21.9965 11.3054 21.9044 11.0018 21.7295C10.6982 21.5547 10.4458 21.3031 10.27 21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div class="notification-line"></div>
+            </div>
+            <div class="notification-card">
+              <div class="notification-content">
+                <div class="notification-header">
+                  <h3 class="notification-title">Fee Payment Reminder</h3>
+                </div>
+                <p class="notification-description">The Deadline For Fee Payment Is [01/01/2025]. Log In To The Portal To Complete Your Transaction.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pagination -->
+        <div class="notification-pagination">
+          <button class="pagination-btn active">1</button>
+          <button class="pagination-btn">2</button>
+          <a href="#" class="pagination-next">Next</a>
+        </div>
+      </section>
+
+      <!-- Hall Ticket Section (Hidden by default) -->
+      <section class="hallticket-section" style="display: none;">
+        <div class="hallticket-container">
+          <!-- Header with Title and Search -->
+          <div class="hallticket-header">
+            <h2 class="hallticket-title">Hall Tickets/Admission Cards</h2>
+            <div class="hallticket-search">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" class="search-icon">
+                <path d="M9.16667 15.8333C12.8486 15.8333 15.8333 12.8486 15.8333 9.16667C15.8333 5.48477 12.8486 2.5 9.16667 2.5C5.48477 2.5 2.5 5.48477 2.5 9.16667C2.5 12.8486 5.48477 15.8333 9.16667 15.8333Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M17.5 17.5L13.875 13.875" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <input type="text" placeholder="Search" class="search-input">
+            </div>
+          </div>
+
+          <!-- Table -->
+          <div class="hallticket-table-wrapper">
+            <table class="hallticket-table">
+              <thead>
+                <tr>
+                  <th>SL No.</th>
+                  <th>Title</th>
+                  <th>Published Date</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>
+                    <span>Entrance Exam 2025 Batch Hall Ticket</span>
+                    <span class="badge-new-small">New</span>
+                  </td>
+                  <td>01/01/2025</td>
+                  <td>
+                    <button class="download-btn" title="Download">
+                      <svg width="16" height="16" viewBox="0 0 20 20" fill="none">
+                        <path d="M10 13.3333V2.5M10 13.3333L6.66667 10M10 13.3333L13.3333 10M2.5 16.6667H17.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Fourth Semester Master Of Physical Education Sup/Lmp Examination 4/2024</td>
+                  <td>01/01/2025</td>
+                  <td>
+                    <button class="download-btn" title="Download">
+                      <svg width="16" height="16" viewBox="0 0 20 20" fill="none">
+                        <path d="M10 13.3333V2.5M10 13.3333L6.66667 10M10 13.3333L13.3333 10M2.5 16.6667H17.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>
+                    <span>Entrance Exam 2025 Batch Hall Ticket</span>
+                    <span class="badge-new-small">New</span>
+                  </td>
+                  <td>01/01/2025</td>
+                  <td>
+                    <button class="download-btn" title="Download">
+                      <svg width="16" height="16" viewBox="0 0 20 20" fill="none">
+                        <path d="M10 13.3333V2.5M10 13.3333L6.66667 10M10 13.3333L13.3333 10M2.5 16.6667H17.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>Fourth Semester Master Of Physical Education Sup/Lmp Examination 4/2024</td>
+                  <td>01/01/2025</td>
+                  <td>
+                    <button class="download-btn" title="Download">
+                      <svg width="16" height="16" viewBox="0 0 20 20" fill="none">
+                        <path d="M10 13.3333V2.5M10 13.3333L6.66667 10M10 13.3333L13.3333 10M2.5 16.6667H17.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>Entrance Exam 2025 Batch Hall Ticket</td>
+                  <td>01/01/2025</td>
+                  <td>
+                    <button class="download-btn" title="Download">
+                      <svg width="16" height="16" viewBox="0 0 20 20" fill="none">
+                        <path d="M10 13.3333V2.5M10 13.3333L6.66667 10M10 13.3333L13.3333 10M2.5 16.6667H17.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>Fourth Semester Master Of Physical Education Sup/Lmp Examination 4/2024</td>
+                  <td>01/01/2025</td>
+                  <td>
+                    <button class="download-btn" title="Download">
+                      <svg width="16" height="16" viewBox="0 0 20 20" fill="none">
+                        <path d="M10 13.3333V2.5M10 13.3333L6.66667 10M10 13.3333L13.3333 10M2.5 16.6667H17.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td>Entrance Exam 2025 Batch Hall Ticket</td>
+                  <td>01/01/2025</td>
+                  <td>
+                    <button class="download-btn" title="Download">
+                      <svg width="16" height="16" viewBox="0 0 20 20" fill="none">
+                        <path d="M10 13.3333V2.5M10 13.3333L6.66667 10M10 13.3333L13.3333 10M2.5 16.6667H17.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Pagination -->
+          <div class="hallticket-pagination">
+            <div class="pagination-info">
+              <span>1 - 10 (2550 Total)</span>
+            </div>
+            <div class="pagination-controls">
+              <button class="pagination-btn active">1</button>
+              <button class="pagination-btn">2</button>
+              <a href="#" class="pagination-next">Next</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Exam Result Section (Hidden by default) -->
+      <section class="examresult-section" style="display: none;">
+        <div class="hallticket-container">
+          <!-- Header with Title and Search -->
+          <div class="hallticket-header">
+            <h2 class="hallticket-title">Exam Result</h2>
+            <div class="hallticket-search">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" class="search-icon">
+                <path d="M9.16667 15.8333C12.8486 15.8333 15.8333 12.8486 15.8333 9.16667C15.8333 5.48477 12.8486 2.5 9.16667 2.5C5.48477 2.5 2.5 5.48477 2.5 9.16667C2.5 12.8486 5.48477 15.8333 9.16667 15.8333Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M17.5 17.5L13.875 13.875" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <input type="text" placeholder="Search" class="search-input">
+            </div>
+          </div>
+
+          <!-- Table -->
+          <div class="hallticket-table-wrapper">
+            <table class="hallticket-table">
+              <thead>
+                <tr>
+                  <th>SL No.</th>
+                  <th>Title</th>
+                  <th>Published Date</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>
+                    <span>Second Semester MASTER OF COMPUTER APPLICATIONS - LATERAL ENTRY Examination 12/2023 (2019 Admission)</span>
+                    <span class="badge-new-small">New</span>
+                  </td>
+                  <td>01/01/2025</td>
+                  <td>
+                    <button class="view-btn" title="View">
+                      <svg width="16" height="16" viewBox="0 0 20 20" fill="none">
+                        <path d="M10 4.16667C5.83334 4.16667 2.27417 6.73417 0.833336 10.4167C2.27417 14.0992 5.83334 16.6667 10 16.6667C14.1667 16.6667 17.7258 14.0992 19.1667 10.4167C17.7258 6.73417 14.1667 4.16667 10 4.16667ZM10 14.5833C8.15906 14.5833 6.66667 13.0909 6.66667 11.25C6.66667 9.40906 8.15906 7.91667 10 7.91667C11.8409 7.91667 13.3333 9.40906 13.3333 11.25C13.3333 13.0909 11.8409 14.5833 10 14.5833ZM10 9.58333C9.07953 9.58333 8.33334 10.3295 8.33334 11.25C8.33334 12.1705 9.07953 12.9167 10 12.9167C10.9205 12.9167 11.6667 12.1705 11.6667 11.25C11.6667 10.3295 10.9205 9.58333 10 9.58333Z" fill="currentColor"/>
+                      </svg>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>
+                    <span>Fifth Semester B.Com Professional CUCBCSS UG Regular/Supplementary/Improvement Examination November 2024</span>
+                    <span class="badge-new-small">New</span>
+                  </td>
+                  <td>01/01/2025</td>
+                  <td>
+                    <button class="view-btn" title="View">
+                      <svg width="16" height="16" viewBox="0 0 20 20" fill="none">
+                        <path d="M10 4.16667C5.83334 4.16667 2.27417 6.73417 0.833336 10.4167C2.27417 14.0992 5.83334 16.6667 10 16.6667C14.1667 16.6667 17.7258 14.0992 19.1667 10.4167C17.7258 6.73417 14.1667 4.16667 10 4.16667ZM10 14.5833C8.15906 14.5833 6.66667 13.0909 6.66667 11.25C6.66667 9.40906 8.15906 7.91667 10 7.91667C11.8409 7.91667 13.3333 9.40906 13.3333 11.25C13.3333 13.0909 11.8409 14.5833 10 14.5833ZM10 9.58333C9.07953 9.58333 8.33334 10.3295 8.33334 11.25C8.33334 12.1705 9.07953 12.9167 10 12.9167C10.9205 12.9167 11.6667 12.1705 11.6667 11.25C11.6667 10.3295 10.9205 9.58333 10 9.58333Z" fill="currentColor"/>
+                      </svg>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>
+                    <span>Second Semester MASTER OF COMPUTER APPLICATIONS - LATERAL ENTRY Examination 12/2023 (2019 Admission)</span>
+                    <span class="badge-new-small">New</span>
+                  </td>
+                  <td>01/01/2025</td>
+                  <td>
+                    <button class="view-btn" title="View">
+                      <svg width="16" height="16" viewBox="0 0 20 20" fill="none">
+                        <path d="M10 4.16667C5.83334 4.16667 2.27417 6.73417 0.833336 10.4167C2.27417 14.0992 5.83334 16.6667 10 16.6667C14.1667 16.6667 17.7258 14.0992 19.1667 10.4167C17.7258 6.73417 14.1667 4.16667 10 4.16667ZM10 14.5833C8.15906 14.5833 6.66667 13.0909 6.66667 11.25C6.66667 9.40906 8.15906 7.91667 10 7.91667C11.8409 7.91667 13.3333 9.40906 13.3333 11.25C13.3333 13.0909 11.8409 14.5833 10 14.5833ZM10 9.58333C9.07953 9.58333 8.33334 10.3295 8.33334 11.25C8.33334 12.1705 9.07953 12.9167 10 12.9167C10.9205 12.9167 11.6667 12.1705 11.6667 11.25C11.6667 10.3295 10.9205 9.58333 10 9.58333Z" fill="currentColor"/>
+                      </svg>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>
+                    <span>Fifth Semester B.Com Professional CUCBCSS UG Regular/Supplementary/Improvement Examination November 2024</span>
+                    <span class="badge-new-small">New</span>
+                  </td>
+                  <td>01/01/2025</td>
+                  <td>
+                    <button class="view-btn" title="View">
+                      <svg width="16" height="16" viewBox="0 0 20 20" fill="none">
+                        <path d="M10 4.16667C5.83334 4.16667 2.27417 6.73417 0.833336 10.4167C2.27417 14.0992 5.83334 16.6667 10 16.6667C14.1667 16.6667 17.7258 14.0992 19.1667 10.4167C17.7258 6.73417 14.1667 4.16667 10 4.16667ZM10 14.5833C8.15906 14.5833 6.66667 13.0909 6.66667 11.25C6.66667 9.40906 8.15906 7.91667 10 7.91667C11.8409 7.91667 13.3333 9.40906 13.3333 11.25C13.3333 13.0909 11.8409 14.5833 10 14.5833ZM10 9.58333C9.07953 9.58333 8.33334 10.3295 8.33334 11.25C8.33334 12.1705 9.07953 12.9167 10 12.9167C10.9205 12.9167 11.6667 12.1705 11.6667 11.25C11.6667 10.3295 10.9205 9.58333 10 9.58333Z" fill="currentColor"/>
+                      </svg>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>
+                    <span>Second Semester MASTER OF COMPUTER APPLICATIONS - LATERAL ENTRY Examination 12/2023 (2019 Admission)</span>
+                    <span class="badge-new-small">New</span>
+                  </td>
+                  <td>01/01/2025</td>
+                  <td>
+                    <button class="view-btn" title="View">
+                      <svg width="16" height="16" viewBox="0 0 20 20" fill="none">
+                        <path d="M10 4.16667C5.83334 4.16667 2.27417 6.73417 0.833336 10.4167C2.27417 14.0992 5.83334 16.6667 10 16.6667C14.1667 16.6667 17.7258 14.0992 19.1667 10.4167C17.7258 6.73417 14.1667 4.16667 10 4.16667ZM10 14.5833C8.15906 14.5833 6.66667 13.0909 6.66667 11.25C6.66667 9.40906 8.15906 7.91667 10 7.91667C11.8409 7.91667 13.3333 9.40906 13.3333 11.25C13.3333 13.0909 11.8409 14.5833 10 14.5833ZM10 9.58333C9.07953 9.58333 8.33334 10.3295 8.33334 11.25C8.33334 12.1705 9.07953 12.9167 10 12.9167C10.9205 12.9167 11.6667 12.1705 11.6667 11.25C11.6667 10.3295 10.9205 9.58333 10 9.58333Z" fill="currentColor"/>
+                      </svg>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>
+                    <span>Fifth Semester B.Com Professional CUCBCSS UG Regular/Supplementary/Improvement Examination November 2024</span>
+                    <span class="badge-new-small">New</span>
+                  </td>
+                  <td>01/01/2025</td>
+                  <td>
+                    <button class="view-btn" title="View">
+                      <svg width="16" height="16" viewBox="0 0 20 20" fill="none">
+                        <path d="M10 4.16667C5.83334 4.16667 2.27417 6.73417 0.833336 10.4167C2.27417 14.0992 5.83334 16.6667 10 16.6667C14.1667 16.6667 17.7258 14.0992 19.1667 10.4167C17.7258 6.73417 14.1667 4.16667 10 4.16667ZM10 14.5833C8.15906 14.5833 6.66667 13.0909 6.66667 11.25C6.66667 9.40906 8.15906 7.91667 10 7.91667C11.8409 7.91667 13.3333 9.40906 13.3333 11.25C13.3333 13.0909 11.8409 14.5833 10 14.5833ZM10 9.58333C9.07953 9.58333 8.33334 10.3295 8.33334 11.25C8.33334 12.1705 9.07953 12.9167 10 12.9167C10.9205 12.9167 11.6667 12.1705 11.6667 11.25C11.6667 10.3295 10.9205 9.58333 10 9.58333Z" fill="currentColor"/>
+                      </svg>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td>
+                    <span>Second Semester MASTER OF COMPUTER APPLICATIONS - LATERAL ENTRY Examination 12/2023 (2019 Admission)</span>
+                    <span class="badge-new-small">New</span>
+                  </td>
+                  <td>01/01/2025</td>
+                  <td>
+                    <button class="view-btn" title="View">
+                      <svg width="16" height="16" viewBox="0 0 20 20" fill="none">
+                        <path d="M10 4.16667C5.83334 4.16667 2.27417 6.73417 0.833336 10.4167C2.27417 14.0992 5.83334 16.6667 10 16.6667C14.1667 16.6667 17.7258 14.0992 19.1667 10.4167C17.7258 6.73417 14.1667 4.16667 10 4.16667ZM10 14.5833C8.15906 14.5833 6.66667 13.0909 6.66667 11.25C6.66667 9.40906 8.15906 7.91667 10 7.91667C11.8409 7.91667 13.3333 9.40906 13.3333 11.25C13.3333 13.0909 11.8409 14.5833 10 14.5833ZM10 9.58333C9.07953 9.58333 8.33334 10.3295 8.33334 11.25C8.33334 12.1705 9.07953 12.9167 10 12.9167C10.9205 12.9167 11.6667 12.1705 11.6667 11.25C11.6667 10.3295 10.9205 9.58333 10 9.58333Z" fill="currentColor"/>
+                      </svg>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Pagination -->
+          <div class="hallticket-pagination">
+            <div class="pagination-info">
+              <span>1 - 10 (2550 Total)</span>
+            </div>
+            <div class="pagination-controls">
+              <button class="pagination-btn active">1</button>
+              <button class="pagination-btn">2</button>
+              <a href="#" class="pagination-next">Next</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Study Materials Section (Hidden by default) -->
+      <section class="studymaterials-section" style="display: none;">
+        <div class="studymaterials-container">
+          <!-- Header with Icon on Left and Content on Right -->
+          <div class="studymaterials-header">
+            <div class="studymaterials-icon-wrapper">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="studymaterials-icon">
+                <path d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M14 2V8H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M16 13H8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M16 17H8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M10 9H8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="studymaterials-content-wrapper">
+              <!-- Breadcrumb -->
+              <div class="studymaterials-breadcrumb">
+                <a href="#">Home</a>
+                <span class="breadcrumb-separator">•</span>
+                <a href="#">Study Materials</a>
+                <span class="breadcrumb-separator">•</span>
+                <span>Model Question Paper</span>
+              </div>
+              <!-- Tab Buttons -->
+              <div class="studymaterials-tabs">
+                <button class="studymaterials-tab active" data-tab="model-question">Model Question Paper</button>
+                <button class="studymaterials-tab" data-tab="study-material">Study Material</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Semester 1 Section -->
+          <div class="semester-section">
+            <div class="semester-header">
+              <h3 class="semester-title">Semester 1</h3>
+              <div class="semester-search">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" class="search-icon">
+                  <path d="M9.16667 15.8333C12.8486 15.8333 15.8333 12.8486 15.8333 9.16667C15.8333 5.48477 12.8486 2.5 9.16667 2.5C5.48477 2.5 2.5 5.48477 2.5 9.16667C2.5 12.8486 5.48477 15.8333 9.16667 15.8333Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M17.5 17.5L13.875 13.875" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <input type="text" placeholder="Search" class="search-input">
+              </div>
+            </div>
+
+            <!-- Study Material Cards Grid -->
+            <div class="studymaterials-grid">
+              <div class="studymaterial-card">
+                <div class="pdf-icon">PDF</div>
+                <div class="studymaterial-title">First Semester English Question Paper (2018-2021) Admission</div>
+              </div>
+              <div class="studymaterial-card">
+                <div class="pdf-icon">PDF</div>
+                <div class="studymaterial-title">First Semester Malayalam Question Paper (2018-2021) Admission</div>
+              </div>
+              <div class="studymaterial-card">
+                <div class="pdf-icon">PDF</div>
+                <div class="studymaterial-title">First Semester Arabic Question Paper (2018-2021) Admission</div>
+              </div>
+              <div class="studymaterial-card">
+                <div class="pdf-icon">PDF</div>
+                <div class="studymaterial-title">First Semester English Question Paper (2018-2021) Admission</div>
+              </div>
+              <div class="studymaterial-card">
+                <div class="pdf-icon">PDF</div>
+                <div class="studymaterial-title">First Semester Malayalam Question Paper (2018-2021) Admission</div>
+              </div>
+              <div class="studymaterial-card">
+                <div class="pdf-icon">PDF</div>
+                <div class="studymaterial-title">First Semester Arabic Question Paper (2018-2021) Admission</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Semester 2 Section -->
+          <div class="semester-section">
+            <div class="semester-header">
+              <h3 class="semester-title">Semester 2</h3>
+              <div class="semester-search">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" class="search-icon">
+                  <path d="M9.16667 15.8333C12.8486 15.8333 15.8333 12.8486 15.8333 9.16667C15.8333 5.48477 12.8486 2.5 9.16667 2.5C5.48477 2.5 2.5 5.48477 2.5 9.16667C2.5 12.8486 5.48477 15.8333 9.16667 15.8333Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M17.5 17.5L13.875 13.875" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <input type="text" placeholder="Search" class="search-input">
+              </div>
+            </div>
+
+            <!-- Study Material Cards Grid -->
+            <div class="studymaterials-grid">
+              <div class="studymaterial-card">
+                <div class="pdf-icon">PDF</div>
+                <div class="studymaterial-title">First Semester English Question Paper (2018-2021) Admission</div>
+              </div>
+              <div class="studymaterial-card">
+                <div class="pdf-icon">PDF</div>
+                <div class="studymaterial-title">First Semester Malayalam Question Paper (2018-2021) Admission</div>
+              </div>
+              <div class="studymaterial-card">
+                <div class="pdf-icon">PDF</div>
+                <div class="studymaterial-title">First Semester Arabic Question Paper (2018-2021) Admission</div>
+              </div>
+              <div class="studymaterial-card">
+                <div class="pdf-icon">PDF</div>
+                <div class="studymaterial-title">First Semester English Question Paper (2018-2021) Admission</div>
+              </div>
+              <div class="studymaterial-card">
+                <div class="pdf-icon">PDF</div>
+                <div class="studymaterial-title">First Semester Malayalam Question Paper (2018-2021) Admission</div>
+              </div>
+              <div class="studymaterial-card">
+                <div class="pdf-icon">PDF</div>
+                <div class="studymaterial-title">First Semester Arabic Question Paper (2018-2021) Admission</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Activities Section (Hidden by default) -->
+      <section class="activities-section" style="display: none;">
+        <div class="activities-container">
+          <!-- Header with Title, Search, and Upload Button -->
+          <div class="activities-header">
+            <h2 class="activities-title">Activities</h2>
+            <div class="activities-header-right">
+              <div class="activities-search">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" class="search-icon">
+                  <path d="M9.16667 15.8333C12.8486 15.8333 15.8333 12.8486 15.8333 9.16667C15.8333 5.48477 12.8486 2.5 9.16667 2.5C5.48477 2.5 2.5 5.48477 2.5 9.16667C2.5 12.8486 5.48477 15.8333 9.16667 15.8333Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M17.5 17.5L13.875 13.875" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <input type="text" placeholder="Search" class="search-input">
+              </div>
+              <button class="btn btn-primary upload-activity-btn">Upload New Activity</button>
+            </div>
+          </div>
+
+          <!-- Activity Cards Grid -->
+          <div class="activities-grid">
+            <!-- First Row - 4 cards with first certificate image -->
+            <div class="activity-card">
+              <div class="activity-program-name">Program Name</div>
+              <div class="activity-date">Date : 20/08/205</div>
+              <div class="activity-certificate">
+                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop" alt="Certificate" class="certificate-image">
+              </div>
+              <div class="activity-position">Position : 1st</div>
+              <div class="activity-grade">Grade : A</div>
+            </div>
+            <div class="activity-card">
+              <div class="activity-program-name">Program Name</div>
+              <div class="activity-date">Date : 20/08/205</div>
+              <div class="activity-certificate">
+                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop" alt="Certificate" class="certificate-image">
+              </div>
+              <div class="activity-position">Position : 1st</div>
+              <div class="activity-grade">Grade : A</div>
+            </div>
+            <div class="activity-card">
+              <div class="activity-program-name">Program Name</div>
+              <div class="activity-date">Date : 20/08/205</div>
+              <div class="activity-certificate">
+                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop" alt="Certificate" class="certificate-image">
+              </div>
+              <div class="activity-position">Position : 1st</div>
+              <div class="activity-grade">Grade : A</div>
+            </div>
+            <div class="activity-card">
+              <div class="activity-program-name">Program Name</div>
+              <div class="activity-date">Date : 20/08/205</div>
+              <div class="activity-certificate">
+                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop" alt="Certificate" class="certificate-image">
+              </div>
+              <div class="activity-position">Position : 1st</div>
+              <div class="activity-grade">Grade : A</div>
+            </div>
+            <!-- Second Row - 4 cards with second certificate image -->
+            <div class="activity-card">
+              <div class="activity-program-name">Program Name</div>
+              <div class="activity-date">Date : 20/08/205</div>
+              <div class="activity-certificate">
+                <img src="https://images.unsplash.com/photo-1586281380117-5a60ae2050cc?w=400&h=300&fit=crop" alt="Certificate" class="certificate-image">
+              </div>
+              <div class="activity-position">Position : 1st</div>
+              <div class="activity-grade">Grade : A</div>
+            </div>
+            <div class="activity-card">
+              <div class="activity-program-name">Program Name</div>
+              <div class="activity-date">Date : 20/08/205</div>
+              <div class="activity-certificate">
+                <img src="https://images.unsplash.com/photo-1586281380117-5a60ae2050cc?w=400&h=300&fit=crop" alt="Certificate" class="certificate-image">
+              </div>
+              <div class="activity-position">Position : 1st</div>
+              <div class="activity-grade">Grade : A</div>
+            </div>
+            <div class="activity-card">
+              <div class="activity-program-name">Program Name</div>
+              <div class="activity-date">Date : 20/08/205</div>
+              <div class="activity-certificate">
+                <img src="https://images.unsplash.com/photo-1586281380117-5a60ae2050cc?w=400&h=300&fit=crop" alt="Certificate" class="certificate-image">
+              </div>
+              <div class="activity-position">Position : 1st</div>
+              <div class="activity-grade">Grade : A</div>
+            </div>
+            <div class="activity-card">
+              <div class="activity-program-name">Program Name</div>
+              <div class="activity-date">Date : 20/08/205</div>
+              <div class="activity-certificate">
+                <img src="https://images.unsplash.com/photo-1586281380117-5a60ae2050cc?w=400&h=300&fit=crop" alt="Certificate" class="certificate-image">
+              </div>
+              <div class="activity-position">Position : 1st</div>
+              <div class="activity-grade">Grade : A</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
